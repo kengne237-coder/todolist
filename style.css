@@ -1,0 +1,170 @@
+/* Reset simple */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Page */
+
+body {
+    background-color: #f4f6f8;
+    min-height: 100vh;
+    padding: 50px;
+}
+
+
+/* Conteneur principal */
+
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    margin-left: 30%;
+}
+
+
+/* Titre */
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+/* Formulaire */
+
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #4caf50;
+}
+
+
+/* Bouton ajouter */
+
+button {
+    padding: 10px 14px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #43a047;
+}
+
+
+/* Liste */
+
+ul {
+    list-style: none;
+}
+
+
+/* Élément de la liste */
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+
+
+/* Texte de l'article */
+
+li span {
+    flex: 1;
+}
+
+
+/* Boutons actions */
+
+.actions {
+    display: flex;
+    gap: 6px;
+}
+
+.actions button {
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 6px 8px;
+    font-size: 12px;
+}
+
+.actions button:hover {
+    background-color: #d5d5d5;
+}
+
+
+/* Bouton supprimer */
+
+.actions .delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.actions .delete:hover {
+    background-color: #e53935;
+}
+
+
+/* Article acheté (bonus) */
+
+.completed {
+    text-decoration: line-through;
+    color: #999;
+}
+
+@media (max-width:400px) {
+    body {
+        padding: 10px;
+    }
+    input,
+    button {
+        width: 100%;
+        font-size: 20px;
+        box-sizing: border-box;
+    }
+    li {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .actions {
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+    }
+    .actions button {
+        width: 100%;
+    }
+    ul {
+        max-width: 100%;
+    }
+}
